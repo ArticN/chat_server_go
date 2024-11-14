@@ -87,7 +87,6 @@ func PrivateHandler() {
 		case privateMessage := <-privateMessages:
 			if chnSrc, ok := clients[privateMessage.dst[1:]]; ok {
 				message := fmt.Sprintf("@%v disse em privado: %v", privateMessage.src, privateMessage.msg)
-				log.Print(message)
 				chnSrc <- message
 			}
 
@@ -135,13 +134,13 @@ func HandleConn(conn net.Conn) {
 
 	ch <- fmt.Sprintf("Conectado como %q", usr.nickname)
 	messages <- fmt.Sprintf("Usuário @%v entrou", usr.nickname)
-	entering <- usr // Send user to entering channel
+	entering <- usr
 
 	input := bufio.NewScanner(conn)
 	for input.Scan() {
 		rawTxt := input.Text()
 		if handleCommand(rawTxt, usr) {
-			leaving <- usr // Send user to leaving channel
+			leaving <- usr
 			close(ch)
 			break
 		}

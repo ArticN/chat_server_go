@@ -42,7 +42,7 @@ func handleIncomingMessage(connection net.Conn) {
 		text := scanner.Text()
 
 		if strings.Contains(text, "disse em privado:") {
-			fmt.Println("received message:", text)
+			fmt.Println("Mensagem recebida:", text)
 
 			privateMsgIndex := strings.Index(text, "disse em privado:") + len("disse em privado:")
 			originalMessage := strings.TrimSpace(text[privateMsgIndex:])

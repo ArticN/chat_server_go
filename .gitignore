@@ -1,0 +1,42 @@
+# Executáveis e arquivos binários
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.bin
+
+# Diretórios de build
+/bin/
+/out/
+/dist/
+
+# Cache do módulo Go e diretórios de build
+/go/
+**/vendor/
+/pkg/
+/.build/
+
+# Arquivos gerados pelo sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos de log e debug
+*.log
+*.test
+*.prof
+*.out
+*.cov
+
+# Arquivos de configuração de IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Arquivos específicos de sistema operacional
+*.bak
+*~
+
+# Módulo e dependências do Go
+go.sum

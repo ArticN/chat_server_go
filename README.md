@@ -24,9 +24,9 @@ O servidor aceita conexões de múltiplos clientes, permitindo que eles enviem m
 
 1. Os comandos funcionam da seguinte forma:
 
-Para enviar uma mensagem pública, /msg {mensagem} -> exemplo: /msg olá, pessoal!
-Para enviar uma mensagem privada, /msg @{user} {mensagem} -> exemplo: /msg @BOT olá, bot!
+Para enviar uma mensagem pública, \msg {mensagem} -> exemplo: \msg olá, pessoal!
+Para enviar uma mensagem privada, \msg @{user} {mensagem} -> exemplo: \msg @BOT olá, bot!
 
-Para sair, /exit
+Para sair, \exit
 
-Para alterar o nickname, /changename {novoNome} -> exemplo: /changename eu
+Para alterar o nickname, \changename {novoNome} -> exemplo: \changename eu
